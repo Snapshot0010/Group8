@@ -34,7 +34,4 @@ def get_counter(name):
     return {name: COUNTERS[name]}, status.HTTP_200_OK
 
 
-@app.route('/counters/<name>', methods=['DELETE'])
-def delete_counter(name):
-    COUNTERS.pop(name)
-    return name, status.HTTP_204_NO_CONTENT
+
