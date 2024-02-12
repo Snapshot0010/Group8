@@ -53,3 +53,8 @@ class CounterTest(TestCase):
         result = self.client.get('counters/emptyRead')
         self.assertEqual(result.status_code, status.HTTP_404_NOT_FOUND)
 
+    def test_delete_counter(self):
+        result = self.client.post('counters/Delete')
+        self.assertEqual(result.status_code, status.HTTP_201_CREATED)
+        result = self.client.delete('counters/Delete')
+        self.assertEqual(result.status_code, status.HTTP_204_NO_CONTENT)
