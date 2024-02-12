@@ -32,6 +32,3 @@ def get_counter(name):
     if name not in COUNTERS:
         return {"Message": f"Counter {name} already exists"}, status.HTTP_404_NOT_FOUND
     return {name: COUNTERS[name]}, status.HTTP_200_OK
-
-
-
