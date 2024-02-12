@@ -52,3 +52,4 @@ class CounterTest(TestCase):
     def test_read_empty_counter(self):
         result = self.client.get('counters/emptyRead')
         self.assertEqual(result.status_code, status.HTTP_404_NOT_FOUND)
+
